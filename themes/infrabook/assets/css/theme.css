@@ -1,4 +1,6 @@
 /* Noir Matte theme — flat, matte, dark */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap");
+
 :root {
   --bg: #0f0f0f;
   --bg-elev: #171717;
@@ -160,7 +162,7 @@ a:hover { text-decoration: none; }
 /* Main */
 .site-main {
   margin-left: 17rem;
-  width: 100%;
+  width: calc(100% - 17rem);
   max-width: 47.5rem;
   padding: 3.5rem 3rem 5rem;
 }
