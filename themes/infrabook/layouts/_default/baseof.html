@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="{{ .Site.Language.Locale | default "en-us" }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{ .Site.Params.description | default .Site.Title }}">
+  <title>{{ if not .IsHome }}{{ .Title }} · {{ end }}{{ .Site.Title }}</title>
+  {{ $css := resources.Get "css/theme.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="sidebar-top">
+        <a class="brand" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+      </div>
+      <nav class="nav" aria-label="Primary">
+        {{ $currentPage := . }}
+        {{ if $currentPage.IsHome }}
+        {{ range .Sections.ByTitle }}
+        <a class="nav-link{{ if eq $currentPage.RelPermalink .RelPermalink }} active{{ end }}" href="{{ .RelPermalink }}">{{ .Title }}</a>
+        {{ end }}
+        {{ else if $currentPage.Pages }}
+        {{ range $currentPage.Pages.ByTitle }}
+        <a class="nav-link nav-child{{ if eq $currentPage.RelPermalink .RelPermalink }} active{{ end }}" href="{{ .RelPermalink }}">{{ .Title }}</a>
+        {{ end }}
+        {{ else if $currentPage.Parent }}
+        {{ range $currentPage.Parent.Pages.ByTitle }}
+        <a class="nav-link nav-child{{ if eq $currentPage.RelPermalink .RelPermalink }} active{{ end }}" href="{{ .RelPermalink }}">{{ .Title }}</a>
+        {{ end }}
+        {{ end }}
+      </nav>
+      {{ $parentURL := "" }}
+      {{ if not .IsHome }}
+      {{ if .Parent }}
+      {{ $parentURL = .Parent.RelPermalink }}
+      {{ else }}
+      {{ $parentURL = .Site.BaseURL }}
+      {{ end }}
+      {{ end }}
+      <div class="page-nav">
+        {{ if $parentURL }}
+        <button type="button" class="page-nav-btn" onclick="location.href='{{ $parentURL }}'">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="M12 6l-6 6 6 6"/></svg>
+          Back
+        </button>
+        {{ end }}
+      </div>
+      <div class="sidebar-foot">
+        <span>{{ .Site.Params.author }}</span>
+      </div>
+    </aside>
+    <main id="main" class="site-main">
+      {{ block "main" . }}{{ end }}
+    </main>
+  </div>
+  <script src="{{ "js/main.js" | relURL }}" defer></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+name = "infrabook"
+license = "AGPL-3.0-only"
+licenselink = "https://github.com/askmehrun/infradocs/blob/master/LICENSE"
+description = "InfraBook - Enterprise documentation theme for infrastructure knowledge bases"
+homepage = "https://github.com/askmehrun/infradocs"
+tags = ["documentation", "infrastructure", "dark", "noir", "enterprise"]
+features = ["dark-mode", "responsive"]
+min_version = "0.169.0"
+
+[author]
+  name = "Mehran Askarnezhad"
+  homepage = "https://github.com/askmehrun"

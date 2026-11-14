@@ -1,0 +1,23 @@
+# --- Site configuration ---
+# Change baseURL to your GitHub Pages URL, e.g. https://<user>.github.io/<repo>/
+baseURL: https://<USERNAME>.github.io/<REPO>/
+locale: en-us
+title: Infra Docs
+theme: infrabook
+
+params:
+  description: Enterprise-grade infrastructure documentation knowledge base
+  author: Your Name
+  github: https://github.com/<USERNAME>/<REPO>
+
+disableKinds:
+  - taxonomy
+  - RSS
+  - sitemap
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    noClasses: false

@@ -1,0 +1,6 @@
+<footer class="site-footer">
+  <span>{{ .Site.Params.author }}</span>
+  {{ with .Site.Params.github }}
+  <a href="{{ . }}" rel="noopener" target="_blank">GitHub</a>
+  {{ end }}
+</footer>
