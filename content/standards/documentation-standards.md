@@ -1,6 +1,5 @@
 ---
 title: Documentation Standards
-parent: Standards
 ---
 
 

@@ -1,6 +1,5 @@
 ---
 title: Service Dependencies
-parent: Architecture
 ---
 
 

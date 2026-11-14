@@ -1,6 +1,5 @@
 ---
 title: Introduction
-parent: Getting Started
 ---
 
 

@@ -1,6 +1,5 @@
 ---
 title: Security Standards
-parent: Standards
 ---
 
 

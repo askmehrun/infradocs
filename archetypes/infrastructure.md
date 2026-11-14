@@ -1,5 +1,21 @@
 ---
 title: '{{ replace .File.ContentBaseName "-" " " | title }}'
-parent: Infrastructure
+description: ''
 type: infrastructure
 ---
+
+## Overview
+
+## Purpose
+
+## Specifications
+
+## Location
+
+## Configuration
+
+## Dependencies
+
+## Operational Considerations
+
+## Related Documentation

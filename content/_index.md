@@ -20,3 +20,4 @@ InfraDocs is a general-purpose documentation template for documenting infrastruc
 - [Standards](standards/)
 - [Decisions](decisions/)
 - [Getting Started](getting-started/)
+- [Glossary](glossary/)

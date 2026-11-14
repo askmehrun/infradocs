@@ -1,6 +1,5 @@
 ---
 title: Network Standards
-parent: Standards
 ---
 
 

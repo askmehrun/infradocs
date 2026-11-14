@@ -1,6 +1,5 @@
 ---
 title: Scope
-parent: Getting Started
 ---
 
 

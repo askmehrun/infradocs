@@ -1,13 +1,17 @@
 ---
 title: '{{ replace .File.ContentBaseName "-" " " | title }}'
-parent: Decisions
+description: ''
 type: adr
 status: proposed
 date: '{{ .Date }}'
 ---
 
-# Context
+## Context
 
-# Decision
+## Decision
 
-# Consequences
+## Alternatives Considered
+
+## Consequences
+
+## References

@@ -1,6 +1,5 @@
 ---
 title: Change Management
-parent: Operations
 ---
 
 

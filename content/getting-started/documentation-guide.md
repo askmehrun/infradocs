@@ -1,6 +1,5 @@
 ---
 title: Documentation Guide
-parent: Getting Started
 ---
 
 

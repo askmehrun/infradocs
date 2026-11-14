@@ -1,6 +1,5 @@
 ---
 title: Access Management
-parent: Operations
 ---
 
 

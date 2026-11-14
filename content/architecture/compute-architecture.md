@@ -1,6 +1,5 @@
 ---
 title: Compute Architecture
-parent: Architecture
 ---
 
 

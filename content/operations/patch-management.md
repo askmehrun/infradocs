@@ -1,6 +1,5 @@
 ---
 title: Patch Management
-parent: Operations
 ---
 
 

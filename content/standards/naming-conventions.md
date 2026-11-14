@@ -1,6 +1,5 @@
 ---
 title: Naming Conventions
-parent: Standards
 ---
 
 

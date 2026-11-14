@@ -1,6 +1,5 @@
 ---
 title: Storage Architecture
-parent: Architecture
 ---
 
 

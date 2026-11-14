@@ -1,5 +1,23 @@
 ---
 title: '{{ replace .File.ContentBaseName "-" " " | title }}'
-parent: Platforms
+description: ''
 type: platform
 ---
+
+## Overview
+
+## Purpose
+
+## Architecture
+
+## Deployment Model
+
+## Configuration
+
+## Dependencies
+
+## Operations
+
+## Limitations
+
+## Related Documentation

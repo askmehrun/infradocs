@@ -1,6 +1,5 @@
 ---
 title: Backup and Recovery
-parent: Operations
 ---
 
 

@@ -1,5 +1,27 @@
 ---
 title: '{{ replace .File.ContentBaseName "-" " " | title }}'
-parent: Services
+description: ''
 type: service
 ---
+
+## Overview
+
+## Purpose
+
+## Service Characteristics
+
+## Architecture
+
+## Dependencies
+
+## Configuration
+
+## Operations
+
+## Monitoring
+
+## Backup and Recovery
+
+## Troubleshooting
+
+## Related Documentation

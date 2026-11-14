@@ -1,6 +1,5 @@
 ---
 title: Overview
-parent: Architecture
 ---
 
 

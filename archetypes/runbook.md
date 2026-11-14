@@ -1,5 +1,27 @@
 ---
 title: '{{ replace .File.ContentBaseName "-" " " | title }}'
-parent: Runbooks
+description: ''
 type: runbook
 ---
+
+## Purpose
+
+## Scope
+
+## Preconditions
+
+## Required Permissions
+
+## Tools
+
+## Procedure
+
+## Verification
+
+## Expected Results
+
+## Failure Handling
+
+## Rollback
+
+## References

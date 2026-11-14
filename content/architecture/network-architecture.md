@@ -1,6 +1,5 @@
 ---
 title: Network Architecture
-parent: Architecture
 ---
 
 
