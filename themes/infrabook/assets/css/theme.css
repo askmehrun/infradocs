@@ -11,7 +11,7 @@
   --text-dim: #999;
   --text-faint: #666;
   --accent-2: #8a6bd3;
-  --accent-hue: #5d3fd3;
+  --accent-hue: #8a6bd3;
   --accent-deep: #3a2580;
   --radius: 12px;
   --radius-sm: 8px;
@@ -337,6 +337,57 @@ img {
   max-width: 100%;
   border-radius: var(--radius-sm);
   margin: 1.125rem 0;
+}
+
+/* Shortcodes */
+.example.shortcode {
+  background: var(--bg-elev-2);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-sm);
+  padding: 1.25rem 1.5rem;
+  margin: 0 0 1.25rem;
+}
+.example.shortcode code {
+  color: var(--text);
+}
+.example.shortcode a {
+  color: var(--accent-hue);
+}
+
+.tip.shortcode {
+  background: var(--bg-elev-2);
+  border-left: 3px solid var(--accent-hue);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  padding: 1rem 1.25rem;
+  margin: 0 0 1.25rem;
+}
+.tip-title {
+  margin: 0 0 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--accent-hue);
+}
+.tip.shortcode p {
+  margin: 0;
+  color: var(--text-dim);
+}
+
+/* Footer */
+.site-footer {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-soft);
+  font-size: 0.8rem;
+  color: var(--text-faint);
+}
+.site-footer a {
+  color: var(--accent-2);
+  margin-left: 0.75rem;
+}
+.site-footer a:hover {
+  color: var(--accent-hue);
 }
 
 @media (max-width: 900px) {
