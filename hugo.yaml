@@ -13,11 +13,10 @@ params:
 disableKinds:
   - taxonomy
   - RSS
-  - sitemap
 
 markup:
   goldmark:
     renderer:
-      unsafe: true
+      unsafe: false
   highlight:
     noClasses: false
