@@ -9,12 +9,25 @@
 /.cache/
 /resources/
 
-# IDE
+# Local environment
+.env
+.env.*
+!.env.example
+
+# Credentials and private key files
+*.pem
+*.key
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+
+# IDE and AI tools
 .idea/
 .vscode/
-*.swp
-*.swo
+.claude/
 
-# OS
+# Operating system
 .DS_Store
 Thumbs.db
