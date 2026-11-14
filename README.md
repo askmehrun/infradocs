@@ -94,12 +94,10 @@ Output goes to `public/`.
 
 1. Push your source to the `master` branch
 2. In GitHub repo **Settings → Pages**, set:
-   - **Source:** Deploy from a branch
-   - **Branch:** `master`
-   - **Folder:** `/public`
+   - **Build and deployment → Source:** `GitHub Actions`
 3. Your site is live at `https://<YOUR_USERNAME>.github.io/<YOUR_REPO>/`
 
-Or use the included GitHub Actions workflow (`.github/workflows/deploy.yml`) which builds and deploys automatically on every push to `master`.
+The included GitHub Actions workflow (`.github/workflows/deploy.yml`) builds, validates, and deploys automatically on every push to `master`. Pull requests run validation only — they do not deploy.
 
 ---
 
@@ -161,6 +159,8 @@ Customize colors in `themes/infrabook/assets/css/theme.css` (`:root` variables).
 | Clean build | `rm -rf public && hugo --gc --minify` |
 | Validate content | `./scripts/validate-content.sh` |
 | Validate links | `./scripts/validate-links.sh` |
+| Full validation (content, lint, build, links) | `./scripts/validate.sh` |
+| Markdown lint | `markdownlint '**/*.md'` |
 
 ---
 

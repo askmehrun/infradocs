@@ -85,14 +85,14 @@ content/
 | Property | Value |
 |----------|-------|
 | Background | `#0f0f0f` (flat matte carbon black, **no gradients**) |
-| Accent | `#5d3fd3` (Iris) — faded variant `#8a6bd3`, deep `#3a2580` |
+| Accent | `#8a6bd3` (Iris, accessible) — deep `#3a2580` |
 | Fonts | Sans: `Inter`, Mono: `JetBrains Mono` |
 | Radius | `12px` (`--radius`), `8px` (`--radius-sm`) |
 | Sidebar | Fixed `17rem` width, `position: fixed`, height `100vh`, `overflow-y: auto` |
 | Layout | Rem/percent responsive, breakpoint `900px` |
 | Links | **No underlines ever** — highlight only |
 | Active nav | Boxed with faded iris background, text colorized |
-| Build | `disableKinds: [taxonomy, RSS, sitemap]`, goldmark unsafe renderer |
+| Build | `disableKinds: [taxonomy, RSS, sitemap]`, goldmark unsafe: false |
 
 ---
 
@@ -102,12 +102,16 @@ content/
 ```yaml
 ---
 title: "Page Title"
-parent: "Parent Section"  # for child pages
+description: "A concise description."
+type: service           # optional: default, infrastructure, platform, service, runbook, adr
+draft: false            # optional, boolean
+weight: 10              # optional, non-negative integer
 ---
 ```
+- Navigation is determined by Hugo's content hierarchy (where a file lives under `content/`), not by front matter
 - **No `draft: true`** — archetypes/default.md has it removed
 - No taxonomy, tags, dates
-- Section `_index.md` files have only `title: "Section Name"` (no parent)
+- Section `_index.md` files have only `title` and optional `description`
 
 ### Templates (`layouts/`)
 - `baseof.html` — shell, sidebar nav, footer; nav logic:
@@ -199,7 +203,7 @@ markup:
 
 | Question | Answer |
 |----------|--------|
-| How to add a new page? | Create `.md` in correct section with `title` + `parent` front matter |
+| How to add a new page? | Create `.md` in correct section with `title` front matter (Hugo hierarchy sets navigation) |
 | How to modify nav? | Edit `baseof.html` nav logic |
 | How to change theme colors? | Edit CSS variables in `theme.css` `:root` |
 | How to rebuild? | `hugo --gc --minify` |
