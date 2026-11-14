@@ -13,6 +13,7 @@ params:
 disableKinds:
   - taxonomy
   - RSS
+  - sitemap
 
 markup:
   goldmark:
